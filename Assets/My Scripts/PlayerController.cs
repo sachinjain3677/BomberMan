@@ -22,8 +22,31 @@ public class PlayerController : MonoBehaviour {
 		x = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
 		z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 
-		transform.Translate(x,0,0);
-		transform.Translate(0,0,z);
+
+		if(x>0){
+
+			transform.eulerAngles = new Vector3(0,0,0);	
+			transform.Translate(x,0,0);
+		}else if(x<0){
+
+			transform.eulerAngles = new Vector3(0,180,0);
+			transform.Translate(-x,0,0);	
+			
+		}
+
+		if(z>0){
+			if(transform.rotation.y!=180 ){
+
+				transform.eulerAngles = new Vector3(0,-90,0);
+				transform.Translate(z,0,0);
+			}
+		}else if(z<0){
+			if(transform.rotation.y!=180 ){
+
+				transform.eulerAngles = new Vector3(0,90,0);
+				transform.Translate(-z,0,0);
+			}
+		}
 		
 	}
 
@@ -32,10 +55,12 @@ public class PlayerController : MonoBehaviour {
 		bombSpawn = transform.position;
 		bombSpawn += Vector3.up * 0.35f;
 		
-		if(Input.GetButton("Fire1") && Time.time > tempTime){
+		if(Input.GetKeyDown(KeyCode.F) && Time.time > tempTime){
 			//Debug.Log(Time.time);
 			tempTime += bombWaitTime;
-			Instantiate(bomb, bombSpawn, transform.rotation);
+			GameObject spawnedBomb = (GameObject)Instantiate(bomb, bombSpawn, transform.rotation);
+			
+			Destroy(spawnedBomb,3);
 		}
 
 	}
