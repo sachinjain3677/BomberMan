@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		x = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
 		z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+		if(Mathf.Abs(x) > Mathf.Abs(z)){
+			z=0;	
+		}else x=0;
 		movement(x,z);
 	}
 

@@ -23,8 +23,8 @@ public class GameController : MonoBehaviour {
 	}
 	
 	void FixedUpdate(){
-		bombSpawn = player.transform.position;
-		bombSpawn += Vector3.up * 0.35f;
+		bombSpawn = new Vector3(Mathf.Round(player.transform.position.x), Mathf.Round(player.transform.position.y), Mathf.Round(player.transform.position.z));
+		//bombSpawn += Vector3.up * 0.35f;
 		
 		if(Input.GetKeyDown(KeyCode.F) && Time.time > nextSpawnTime){
 			//Debug.Log(Time.time);
