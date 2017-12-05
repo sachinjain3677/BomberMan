@@ -1,22 +1,2 @@
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: initializeCompiler
-Cmd: preprocess
-  insize=688 outsize=688 ok=1
-Cmd: preprocess
-  insize=838 outsize=838 ok=1
-Cmd: preprocess
-  insize=539 outsize=539 ok=1
-Cmd: preprocess
-  insize=1029 outsize=330 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1042 outsize=722 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1042 outsize=366 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME ok=1
-Cmd: preprocess
-  insize=699 outsize=699 ok=1
-Cmd: preprocess
-  insize=923 outsize=923 ok=1
-Cmd: preprocess
-  insize=290 outsize=290 ok=1
-Cmd: preprocess
-  insize=807 outsize=807 ok=1
