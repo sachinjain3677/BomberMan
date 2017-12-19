@@ -8,78 +8,148 @@ public class BombSpawnAndExplode : MonoBehaviour {
 	Vector3 bombSpawn;
 	float lastSpawnTime;
 	float nextSpawnTime;
-	GameController gc;
+	ObjectMatrix om;
+	randomLevelMaker rlm;
+	int rows;
+	int columns;
+
 	
 	public GameObject bomb;
 	public float bombWaitTime;
 	public GameObject player;
-	public GameObject explosion;
+	public GameObject fireCenter;
+	public GameObject fireSidewaysNoSmoke;
+	public GameObject fireSidewaysSmoke;
 	public int explosionSpread;
 	public float explosionWaitTime;
 	public float explosionStay;
+	public float blockStayInExplosion;
 
-	// Use this for initialization
+
 	void Start(){
+		explosionSpread = 1;
 		lastSpawnTime=nextSpawnTime=0.0f;
-		gc = GameObject.Find("GameController").GetComponent<GameController>();
+		om = GameObject.Find("GameController").GetComponent<ObjectMatrix>();
+		om.getObjectMatrix();
+		rows = om.rows;
+		columns = om.columns;
+		rlm = GameObject.Find("GameController").GetComponent<randomLevelMaker>();
+		rlm.generateLevel();
 	}
 	
 	void FixedUpdate(){
+		//position of bomb 
 		bombSpawn = new Vector3(Mathf.Round(player.transform.position.x), Mathf.Round(player.transform.position.y), Mathf.Round(player.transform.position.z));
-		//bombSpawn += Vector3.up * 0.35f;
 		
-		if(Input.GetKeyDown(KeyCode.F) && Time.time > nextSpawnTime){
-			//Debug.Log(Time.time);
-			lastSpawnTime = Time.time;
-			nextSpawnTime = lastSpawnTime + bombWaitTime;
-			GameObject spawnedBomb = (GameObject)Instantiate(bomb, bombSpawn, player.transform.rotation);
+		if(Input.GetKeyDown(KeyCode.F) && Time.time > nextSpawnTime && om.level[(int)bombSpawn.x, (int)bombSpawn.z]==null){
+			lastSpawnTime = Time.time;//time of last bomb spawn
+			nextSpawnTime = lastSpawnTime + bombWaitTime;//predicted time after which bomb spawn is possible
+			GameObject spawnedBomb = (GameObject)Instantiate(bomb, bombSpawn, Quaternion.identity);//spawned bomb object
+			om.level[(int)spawnedBomb.transform.position.x, (int)spawnedBomb.transform.position.z] = spawnedBomb.gameObject;//filling level matrix with the instantiated bomb
+			Destroy(om.level[(int)spawnedBomb.transform.position.x, (int)spawnedBomb.transform.position.z],3);//destroying spawned bomb object
 			Destroy(spawnedBomb,3);
-			StartCoroutine(explosionSpawn(bombSpawn, player.transform.rotation));	
-			
+			StartCoroutine(explosionSpawn(bombSpawn, spawnedBomb));//coroutine to do all the explosion stuff of the spwaned bomb
 		}
 
 	}
 
-	IEnumerator explosionSpawn(Vector3 bombSpawnCenter, Quaternion rotation){
-		yield return new WaitForSeconds(3.0f);
+	//does all the explosion stuff by taking bomb position as explosion center
+	IEnumerator explosionSpawn(Vector3 bombSpawnCenter, GameObject spawnedBomb){
+		yield return new WaitForSeconds(3.0f);//made to wait 3 sec so that bomb can explode
+		bool forward = true;//true is explosion spawn allowed in +z
+		bool back = true;//true is explosion spawn allowed in -z
+		bool left = true;//true is explosion spawn allowed in -x
+		bool right = true;//true is explosion spawn allowed in +x
 
-		GameObject explosionCenter = (GameObject)Instantiate(explosion, bombSpawnCenter, rotation);
-		Destroy(explosionCenter, explosionStay);
-		yield return new WaitForSeconds(explosionWaitTime);
+		bool forwardLast = false;//true if current explosion is last explosion in +z
+		bool backLast = false;//true if current explosion is last explosion in -z
+		bool leftLast = false;//true if current explosion is last explosion in -x
+		bool rightLast = false;//true if current explosion is last explosion in +x
 
-		for(int i=1; i<explosionSpread; i++){
+
+		GameObject explosionCenter = (GameObject)Instantiate(fireCenter, bombSpawnCenter + Vector3.up * 0.11f, Quaternion.identity);
+		//spawned explosion at the origin of the explosion or the position of the bomb
+
+		Destroy(explosionCenter, explosionStay);//destroying spawned explosion game object
+		yield return new WaitForSeconds(explosionWaitTime);//time gap between two consecutive explosions to illusion of moving outward
+
+		for(int i=0; i<explosionSpread; i++){
+			//forward->positive Z
+			//backward->negative Z
+			//left->negative X
+			//right->positive X
+
+
+			if(i == explosionSpread - 1){
+				forwardLast = true;
+				backLast = true;
+				leftLast = true;
+				rightLast = true;
+			}//last explosion in all directions
+
+
+			if(!(bombSpawnCenter.z + Vector3.forward.z *(i+1) < columns-2)){
+				forwardLast = true;
+			}//last explosion in forward direction if encountered wall
+
+			if(!(bombSpawnCenter.z + Vector3.back.z *(i+1) > 0)){
+				backLast = true;
+			}//last explosion in backward direction if encountered wall
+
+			if(!(bombSpawnCenter.x + Vector3.left.x *(i+1) > 0)){
+				leftLast = true;
+			}//last explosion in left direction if encountered wall
 			
-			spawnExplosion(bombSpawnCenter + Vector3.forward *i, rotation);
-
-			spawnExplosion(bombSpawnCenter + Vector3.back *i, rotation);
-
-			spawnExplosion(bombSpawnCenter + Vector3.left *i, rotation);
-
-			spawnExplosion(bombSpawnCenter + Vector3.right *i, rotation);
+			if(!(bombSpawnCenter.x + Vector3.right.x *(i+1) < rows-2)){
+				rightLast = true;
+			}//last explosion in right direction if encountered wall
 
 
-			// GameObject explosion1 = (GameObject)Instantiate(explosion, bombSpawnCenter + Vector3.forward *i, rotation);
-			// GameObject explosion2 = (GameObject)Instantiate(explosion, bombSpawnCenter + Vector3.back *i, rotation);
-			// GameObject explosion3 = (GameObject)Instantiate(explosion, bombSpawnCenter + Vector3.left*i, rotation);
-			// GameObject explosion4 = (GameObject)Instantiate(explosion, bombSpawnCenter + Vector3.right *i, rotation);
-			// DestroyExplosionObjects(explosion1, explosion2, explosion3, explosion4);
+			//following four conditions all spawning explosions after checking availability of space
+			if(forward && bombSpawnCenter.z + Vector3.forward.z *i < columns-2)
+				spawnExplosion(bombSpawnCenter + Vector3.forward *i + Vector3.up * 0.11f, Quaternion.Euler(new Vector3(0.0f, 180.0f, 0.0f)),ref forward, forwardLast);
+
+			if(back && bombSpawnCenter.z + Vector3.back.z *i > 0 )
+				spawnExplosion(bombSpawnCenter + Vector3.back *i + Vector3.up * 0.11f, Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f)),ref back, backLast);
+
+			if(left && bombSpawnCenter.x + Vector3.left.x *i > 0 )
+				spawnExplosion(bombSpawnCenter + Vector3.left *i + Vector3.up * 0.11f, Quaternion.Euler(new Vector3(0.0f, 90.0f, 0.0f)),ref left, leftLast);
+
+			if(right && bombSpawnCenter.x + Vector3.right.x *i < rows-2)	
+				spawnExplosion(bombSpawnCenter + Vector3.right *i + Vector3.up * 0.11f, Quaternion.Euler(new Vector3(0.0f, -90.0f, 0.0f)),ref right, rightLast);
+
 			yield return new WaitForSeconds(explosionWaitTime);
 		}
 	}
 
-	void spawnExplosion(Vector3 position, Quaternion rotation){
-		if(gc.level[(int)position.x, (int)position.z]==null){
-			GameObject spawnedExplosion = (GameObject)Instantiate(explosion, position, rotation);
-			Destroy(spawnedExplosion, explosionStay);
-		}
-		
-	}
 
-	// void DestroyExplosionObjects(GameObject explosionObject1, GameObject explosionObject2, GameObject explosionObject3, GameObject explosionObject4){
-	// 	Destroy(explosionObject1, explosionStay);
-	// 	Destroy(explosionObject2, explosionStay);
-	// 	Destroy(explosionObject3, explosionStay);
-	// 	Destroy(explosionObject4, explosionStay);
-	// }
+
+	void spawnExplosion(Vector3 position, Quaternion rotation, ref bool spawnCheck, bool last){
+		//spawnCheck is the permission for the explosion to be spawned in that direction
+		GameObject fireToBeSpawned;
+
+		if(!last){
+			fireToBeSpawned = fireSidewaysNoSmoke;	
+		}else{
+			fireToBeSpawned = fireSidewaysSmoke;	
+		}//game object to be spawned as explosions changes type if last in its direction
+
+
+		if(om.level[(int)position.x, (int)position.z]==null){//if position in level matrix is empty
+			GameObject spawnedExplosion = (GameObject)Instantiate(fireToBeSpawned, position, rotation);//spawn fire/explosion
+			Destroy(spawnedExplosion, explosionStay);//destroy fire/explosion
+		}else{
+			//if position in level matrix not empty but could also be due to wooden box that needs to be destroyed if comes in explosion's range
+			if(om.level[(int)position.x, (int)position.z].gameObject.tag=="woodenBox"){
+				//GameObject spawnedExplosion = (GameObject)Instantiate(fireSidewaysSmoke, position, rotation);//spawn explosion spawned on end points of explosion/fire as explosion/fire chain terminates here
+				//Destroy(spawnedExplosion, explosionStay);//destroy the explosion/fire
+				Destroy(om.level[(int)position.x, (int)position.z].gameObject, blockStayInExplosion);//destroying the wooden block
+				om.level[(int)position.x, (int)position.z]=null;//emptying the place in level matrix as wooden box is destroyed
+			}
+
+			spawnCheck = false;//no more permission to spawn explosion in this direction
+			return;//end function
+		}
+	}
 
 }
