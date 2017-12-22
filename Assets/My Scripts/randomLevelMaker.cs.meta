@@ -1,10 +1,13 @@
 fileFormatVersion: 2
 guid: bc72e95174f63d2489ff34d1295310ba
-timeCreated: 1513446226
+timeCreated: 1513772953
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - woodenBox: {instanceID: 0}
+  - woodenBoxPowerUp: {instanceID: 0}
+  - imageTarget: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
