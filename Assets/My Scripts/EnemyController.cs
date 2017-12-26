@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour {
 
 	Vector3 approxPosition;
+	Vector3 targetPosition;
 	Vector3 movementDirection;
 	Rigidbody rb;
 	ObjectMatrix om;
@@ -16,15 +17,21 @@ public class EnemyController : MonoBehaviour {
 		om = GameObject.Find("GameController").GetComponent<ObjectMatrix>();
 		move = false;
 		rb = GetComponent<Rigidbody> ();
+		targetPosition = transform.position;
 	}
 	
 	void Update () {
 		approxPosition = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), Mathf.Round(transform.position.z));
 
-		if(move){
+		if(move && transform.position!=targetPosition){
+			Debug.Log("Enemy moved");
 			transform.eulerAngles = new Vector3(0,(movementDirection.x + movementDirection.z) * 90.0f,0);
 			rb.velocity = transform.forward * movementSpeed;
-		}else if(approxPosition == transform.position){
+			if(Mathf.Abs(transform.position.x - targetPosition.x) + Mathf.Abs(transform.position.z - targetPosition.z) < 0.5f){
+				transform.position = targetPosition;
+				move = false;
+			}
+		}else if(transform.position == targetPosition){
 			Debug.Log("Start of if loop");
 			float direction_predictor = Random.Range(0.0f, 1.0f);
 			
@@ -39,9 +46,12 @@ public class EnemyController : MonoBehaviour {
 			}
 
 			if(space_available(movementDirection)){
+				targetPosition = approxPosition + movementDirection;
 				move = true;
+				Debug.Log("move is true");
 			}else{
 				move = false;
+				Debug.Log("move is false");
 			}
 				
 			//movement(movementDirection, approxPosition, ref om);
@@ -65,7 +75,7 @@ public class EnemyController : MonoBehaviour {
 
 	bool space_available(Vector3 direction){
 		Debug.Log("Inside space_available function");
-		Vector3 temp_position = transform.position + direction;
+		Vector3 temp_position = approxPosition + direction;
 
 		if(temp_position.x < 0 || temp_position.z < 0 || temp_position.x > om.rows-2 || temp_position.z > om.columns-2){
 			return false;

@@ -175,6 +175,8 @@ public class BombSpawnAndExplode : MonoBehaviour {
 				//no spawnCheck = false in this case as explosion will pass through enemy
 				//DO STUFF
 			
+			}else{
+				spawnCheck = false;
 			}
 
 			
