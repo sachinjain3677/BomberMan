@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExplosionTriggerScript : MonoBehaviour {
-
-	void OnTriggerEnter(Collider collider){
-		if(collider.tag=="Player"){
-			Destroy(collider.gameObject);
-		}
-
-		if(collider.tag=="Enemy"){
-			Destroy(collider.gameObject);	
-		}
-	}
+public class power_pick_up : MonoBehaviour {
 
 	
+
+	void OnTriggerEnter(Collider collider){
+		if(collider.tag=="power_up"){
+			Destroy(collider.gameObject);
+			//DO SOME ANIMATION STUFF
+		}
+	}
 }
