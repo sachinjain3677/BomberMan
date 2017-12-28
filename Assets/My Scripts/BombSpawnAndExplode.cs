@@ -175,6 +175,13 @@ public class BombSpawnAndExplode : MonoBehaviour {
 				//no spawnCheck = false in this case as explosion will pass through enemy
 				//DO STUFF
 			
+			}else if(om.level[(int)position.x, (int)position.z].gameObject.tag=="bomb"){
+			
+
+				GameObject spawnedExplosion = (GameObject)Instantiate(fireSidewaysNoSmoke, position, rotation);//spawn fire/explosion
+				Destroy(spawnedExplosion, explosionStay);//destroy fire/explosion
+				//no spawnCheck = false in this case as explosion will pass through bomb
+			
 			}else{
 				spawnCheck = false;
 			}
