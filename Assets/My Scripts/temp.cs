@@ -9,17 +9,8 @@ public class temp : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-		// func(ref i);
-		// Debug.Log("i: "+i);
-		// Debug.Log(Vector3.forward.z);
-		l = (l<k)?k:l;
-		Debug.Log("Temp_l: "+l);
-
+		transform.LookAt(new Vector3(transform.position.x,transform.position.y,transform.position.z+1));	
 	}
 	
-	// Update is called once per frame
-	void func (ref int a) {
-		a=6;
-	}
+	
 }
