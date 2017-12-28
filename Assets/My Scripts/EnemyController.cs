@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour {
 	bool move;
 	movingPlayer mp;
 	Vector3 moving_direction;
+	int layerMask;
 	
 	public float check_distance;
 	
@@ -19,6 +20,9 @@ public class EnemyController : MonoBehaviour {
 		//update_obstruction_bools(ref front_obstruction, ref back_obstruction, ref left_obstruction, ref right_obstruction);
 		mp.move = false;
 		mp.moving_direction = new Vector3(0,0,0);
+		layerMask = 1 << 8;
+		layerMask = layerMask + 1 << 9;
+		layerMask = ~layerMask;
 	}
 
 	void Update(){
@@ -70,25 +74,25 @@ public class EnemyController : MonoBehaviour {
 	}
 
 	void update_obstruction_bools(ref bool front_obstruction, ref bool back_obstruction, ref bool left_obstruction, ref bool right_obstruction){
-		if(Physics.Raycast(transform.position, Vector3.forward, check_distance)){
+		if(Physics.Raycast(transform.position, Vector3.forward, check_distance, layerMask)){
 			front_obstruction = true;
 		}else{
 			front_obstruction = false;
 		}
 
-		if(Physics.Raycast(transform.position, Vector3.back, check_distance)){
+		if(Physics.Raycast(transform.position, Vector3.back, check_distance, layerMask)){
 			back_obstruction = true;
 		}else{
 			back_obstruction = false;
 		}
 
-		if(Physics.Raycast(transform.position, Vector3.left, check_distance)){
+		if(Physics.Raycast(transform.position, Vector3.left, check_distance, layerMask)){
 			left_obstruction = true;
 		}else{
 			left_obstruction = false;
 		}
 
-		if(Physics.Raycast(transform.position, Vector3.right, check_distance)){
+		if(Physics.Raycast(transform.position, Vector3.right, check_distance, layerMask)){
 			right_obstruction = true;
 		}else{
 			right_obstruction = false;

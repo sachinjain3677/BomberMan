@@ -105,6 +105,8 @@ public class randomLevelMaker : MonoBehaviour {
 						}
 						spawnedWoodenBox.transform.parent = level.transform;
 					}
+				}else if(om.level[i,j].gameObject.tag=="Enemy"){
+					om.level[i,j] = null;
 				}
 			}
 		}
