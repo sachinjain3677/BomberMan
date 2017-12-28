@@ -95,6 +95,7 @@
      <Compile Include="Assets\Vuforia\Scripts\WordBehaviour.cs" />
      <Compile Include="Assets\movingPlayer.cs" />
      <Compile Include="Assets\power_pick_up.cs" />
+     <Compile Include="Assets\triggerScript.cs" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
      <None Include="Assets\link.xml" />
