@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Walk_and_Run.cs">
+    <Files>
+      <File FileName="Assets\Walk_and_Run.cs" Line="27" Column="29" />
+      <File FileName="Assets\My Prefabs\BasicBandit\DemoSceneBasicBandit\Scripts\ButtonFunction.cs" Line="1" Column="1" />
+      <File FileName="Assets\My Scripts\PlayerController.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
