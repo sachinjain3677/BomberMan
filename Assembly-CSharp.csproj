@@ -56,6 +56,7 @@
      <Compile Include="Assets\My Scripts\ExplosionTriggerScript.cs" />
      <Compile Include="Assets\My Scripts\ObjectMatrix.cs" />
      <Compile Include="Assets\My Scripts\PlayerController.cs" />
+     <Compile Include="Assets\My Scripts\Walk_and_Run.cs" />
      <Compile Include="Assets\My Scripts\randomLevelMaker.cs" />
      <Compile Include="Assets\My Scripts\temp.cs" />
      <Compile Include="Assets\Vuforia\Scripts\BackgroundPlaneBehaviour.cs" />
