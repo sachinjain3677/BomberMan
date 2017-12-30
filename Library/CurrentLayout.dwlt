@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -107,10 +107,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 713, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
+  m_MinSize: {x: 711, y: 492}
+  m_MaxSize: {x: 18006, y: 14042}
   vertical: 0
-  controlID: 113
+  controlID: 41
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 114
+  controlID: 10
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,8 +230,8 @@ MonoBehaviour:
     y: 0
     width: 277
     height: 731
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -345,9 +345,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 13.163207, y: 3.4480097, z: 12.192546}
+    m_Target: {x: 11.73438, y: -116.1019, z: -122.38907}
     speed: 2
-    m_Value: {x: 13.163207, y: 3.4480097, z: 12.192546}
+    m_Value: {x: 11.73438, y: -116.1019, z: -122.38907}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -370,13 +370,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.056120604, y: -0.9357995, z: 0.30121285, w: 0.17435798}
+    m_Target: {x: -0.0009852229, y: 0.9312695, z: -0.36432108, w: -0.0025216434}
     speed: 2
-    m_Value: {x: 0.056120604, y: -0.9357995, z: 0.30121285, w: 0.17435798}
+    m_Value: {x: -0.0009852229, y: 0.9312695, z: -0.36432108, w: -0.0025216434}
   m_Size:
-    m_Target: 4.0659246
+    m_Target: 202.23738
     speed: 2
-    m_Value: 4.0659246
+    m_Value: 202.23738
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -415,9 +415,9 @@ MonoBehaviour:
     height: 398
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 54260000
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 5453fbff5653fbff4a50feffa0e4ffffe6fbffff00000000
+    m_ExpandedIDs: 08c8ffffead8ffffe6fbffff00000000cc4d0000024e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -477,19 +477,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/My Scenes
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/My Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\AriesProject
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 2}
-    m_SelectedIDs: be250000
-    m_LastClickedID: 9662
-    m_ExpandedIDs: 00000000be250000602600006a2600006a270000e227000026280000422900003a2b00006e2b000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 50}
+    m_SelectedIDs: 722a0000
+    m_LastClickedID: 10866
+    m_ExpandedIDs: 00000000c0250000582600007026000070270000ee270000322800004e2900004c2b0000862b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -517,7 +517,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000be250000602600006a2600006a270000e2270000262800003a2b00006e2b0000
+    m_ExpandedIDs: 00000000c025000058260000642600007026000070270000ee270000322800004e2900004c2b0000862b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -545,7 +545,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 682800005026000092290000d4290000
+    m_ExpandedInstanceIDs: 682800005026000092290000d429000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
