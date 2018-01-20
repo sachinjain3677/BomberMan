@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4AB1900E-1B52-BF2F-ACD7-FEF512CF8810}</ProjectGuid>
+    <ProjectGuid>{E3548F99-6BAA-881B-7DAB-014FAFC89F6C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -19,7 +19,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_1;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;VUFORIA_ANDROID_SETTINGS;UNITY_HAS_GOOGLEVR</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_3;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;VUFORIA_ANDROID_SETTINGS;CROSS_PLATFORM_INPUT;MOBILE_INPUT;UNITY_HAS_GOOGLEVR</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -59,6 +59,36 @@
      <Compile Include="Assets\My Scripts\Walk_and_Run.cs" />
      <Compile Include="Assets\My Scripts\randomLevelMaker.cs" />
      <Compile Include="Assets\My Scripts\temp.cs" />
+     <Compile Include="Assets\Survival Shooter\Scripts\Enemy\EnemyAttack.cs" />
+     <Compile Include="Assets\Survival Shooter\Scripts\Enemy\EnemyHealth.cs" />
+     <Compile Include="Assets\Survival Shooter\Scripts\Enemy\EnemyMovement.cs" />
+     <Compile Include="Assets\Survival Shooter\Scripts\Managers\EnemyManager.cs" />
+     <Compile Include="Assets\Survival Shooter\Scripts\Managers\GameOverManager.cs" />
+     <Compile Include="Assets\Survival Shooter\Scripts\Managers\ScoreManager.cs" />
+     <Compile Include="Assets\Survival Shooter\Scripts\Player\PlayerHealth.cs" />
+     <Compile Include="Assets\Survival Shooter\Scripts\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Survival Shooter\Scripts\Player\PlayerShooting.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\MobileInput\Scripts\CrossPlatformInputManager.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\MobileInput\Scripts\Joystick.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\MobileInput\Scripts\MobileControlRig.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\MobileInput\Scripts\PlatformSpecific\MobileInput.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\MobileInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\MobileInput\Scripts\VirtualInput.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\Scripts\Audio\MixLevels.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\Scripts\Camera\CameraFollow.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\Scripts\Enemy\EnemyAttack.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\Scripts\Enemy\EnemyHealth.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\Scripts\Enemy\EnemyMovement.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\Scripts\Helpers\RandomAnimationPoint.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\Scripts\Helpers\RandomParticlePoint.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\Scripts\Helpers\VolumeHandler.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\Scripts\Managers\EnemyManager.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\Scripts\Managers\GameOverManager.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\Scripts\Managers\PauseManager.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\Scripts\Managers\ScoreManager.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\Scripts\Player\PlayerHealth.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\Scripts\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\Scripts\Player\PlayerShooting.cs" />
      <Compile Include="Assets\Vuforia\Scripts\BackgroundPlaneBehaviour.cs" />
      <Compile Include="Assets\Vuforia\Scripts\CloudRecoBehaviour.cs" />
      <Compile Include="Assets\Vuforia\Scripts\CylinderTargetBehaviour.cs" />
@@ -122,7 +152,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/nunit.framework.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
@@ -134,7 +164,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions">
- <HintPath>C:/Users/dr-food/Desktop/Unity related/AriesProject/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
+ <HintPath>D:/Extra Projects/19 jan 2018/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
