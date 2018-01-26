@@ -18,3 +18,11 @@ Todo:
 - [ ] Animations (like Dying)
 - [ ] Multiplayer using Google API
 - [ ] Multiplayer without Internet
+
+
+New Ideas:
+
+- [ ] Spotlight
+- [ ] make wall invisible if camera below 45 degrees
+- [ ] position of AR camera w.r.t target changes controls
+- [ ] player can see only his character in multiplayer spotlight
