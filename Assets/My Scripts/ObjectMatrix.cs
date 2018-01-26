@@ -21,7 +21,7 @@ public class ObjectMatrix : MonoBehaviour {
 				level[(int)child.position.x, (int)child.position.z] = child.gameObject;
 			}
 		}
-		Debug.Log(level[0,0]);
+		//Debug.Log(level[0,0]);
 
 		// foreach(var child in level){
 		// 	Debug.Log(child);
