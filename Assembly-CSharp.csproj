@@ -55,8 +55,11 @@
      <Compile Include="Assets\My Scripts\ObjectMatrix.cs" />
      <Compile Include="Assets\My Scripts\PlayerController.cs" />
      <Compile Include="Assets\My Scripts\Walk_and_Run.cs" />
+     <Compile Include="Assets\My Scripts\movingPlayer.cs" />
+     <Compile Include="Assets\My Scripts\power_pick_up.cs" />
      <Compile Include="Assets\My Scripts\randomLevelMaker.cs" />
      <Compile Include="Assets\My Scripts\temp.cs" />
+     <Compile Include="Assets\My Scripts\triggerScript.cs" />
      <Compile Include="Assets\Survival Shooter\Scripts\Enemy\EnemyHealth.cs" />
      <Compile Include="Assets\Survival Shooter\Scripts\Enemy\EnemyMovement.cs" />
      <Compile Include="Assets\Vuforia\Scripts\BackgroundPlaneBehaviour.cs" />
@@ -94,9 +97,7 @@
      <Compile Include="Assets\Vuforia\Scripts\WireframeBehaviour.cs" />
      <Compile Include="Assets\Vuforia\Scripts\WireframeTrackableEventHandler.cs" />
      <Compile Include="Assets\Vuforia\Scripts\WordBehaviour.cs" />
-     <Compile Include="Assets\movingPlayer.cs" />
-     <Compile Include="Assets\power_pick_up.cs" />
-     <Compile Include="Assets\triggerScript.cs" />
+     <Compile Include="Assets\player_touched.cs" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
      <None Include="Assets\link.xml" />
@@ -135,7 +136,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions">
- <HintPath>D:/AriesProject/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
+ <HintPath>C:/Users/sachi/Desktop/Unity_Related/AriesProject/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -49,8 +49,8 @@ public class randomLevelMaker : MonoBehaviour {
 
 		enemy_position_x = new int[max_no_of_enemies];//array containing x-coordinates of enemies spawn positions
 		enemy_position_z = new int[max_no_of_enemies];//array containing z-coordinates of enemies spawn positions
-		Debug.Log("enemySections_x: "+enemySections_x);
-		Debug.Log("enemySections_z: "+enemySections_z);
+		//Debug.Log("enemySections_x: "+enemySections_x);
+		//Debug.Log("enemySections_z: "+enemySections_z);
 
 		for(int i=0; i<max_no_of_enemies; i++){
 			enemy_position_x[i] = (int)Random.Range(0.0f, distancePerEnemy_x);//random numbers are used as x-coordinates
@@ -59,8 +59,8 @@ public class randomLevelMaker : MonoBehaviour {
 
 		for(int i=0; i<enemySections_x; i++){
 			for(int j=0; j<enemySections_z; j++){
-				Debug.Log("i: "+i);
-				Debug.Log("j: "+j);
+				//Debug.Log("i: "+i);
+				//Debug.Log("j: "+j);
 				if(i==0 && j==0){
 					continue;
 				}
@@ -71,8 +71,8 @@ public class randomLevelMaker : MonoBehaviour {
 
 				int x_coordinate = skipFactor*((int)distancePerEnemy_x*(i) + enemy_position_x[i+j]);
 				int z_coordinate = skipFactor*((int)distancePerEnemy_z*(j) + enemy_position_z[i+j]);
-				Debug.Log("x_coordinate: "+x_coordinate);
-				Debug.Log("z_coordinate: "+z_coordinate);
+				//Debug.Log("x_coordinate: "+x_coordinate);
+				//Debug.Log("z_coordinate: "+z_coordinate);
 				if(x_coordinate <= rows-2 && z_coordinate <= columns-2 && om.level[x_coordinate, z_coordinate] == null){
 					GameObject enemySpawned = Instantiate(enemy, new Vector3(x_coordinate, 0, z_coordinate), Quaternion.identity);
 					om.level[x_coordinate, z_coordinate] = enemySpawned.gameObject;
@@ -101,10 +101,17 @@ public class randomLevelMaker : MonoBehaviour {
 						GameObject spawnedWoodenBox = Instantiate(woodenBox, new Vector3(i, 0, j), Quaternion.identity);
 						om.level[i,j] = spawnedWoodenBox.gameObject;
 						woodenBox_spawn_count++;
-						if(woodenBox_spawn_count == 1){
-							spawnedWoodenBox.transform.gameObject.tag = "woodenBox_power_up";//set tag of wooden box with power inside it as woodenBox_power_up
+						if(woodenBox_spawn_count == 2){//power up in second cube
+							spawnedWoodenBox.transform.gameObject.tag = "woodenBox_power_up_increase_blast";//set tag of wooden box with power inside it as woodenBox_power_up
 							power_ups_spawned++;
 						}
+
+						if(woodenBox_spawn_count == 1){//power up in first cube
+							spawnedWoodenBox.transform.gameObject.tag = "woodenBox_power_up_increase_speed";//set tag of wooden box with power inside it as woodenBox_power_up
+							power_ups_spawned++;
+						}
+
+
 						spawnedWoodenBox.transform.parent = level.transform;
 					}
 				}else if(om.level[i,j].gameObject.tag=="Enemy"){
