@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2DD03A96-F1F3-5CEE-3C07-E46DD8ADD5F7}</ProjectGuid>
+    <ProjectGuid>{37F5E46E-735F-0FF5-BEA4-50D24DAF34A3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -126,21 +126,21 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions.Editor">
- <HintPath>D:/Extra Projects/19 jan 2018/Assets/Vuforia/Editor/Scripts/Vuforia.UnityExtensions.Editor.dll</HintPath>
+ <HintPath>D:/AriesProject/Assets/Vuforia/Editor/Scripts/Vuforia.UnityExtensions.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions">
- <HintPath>D:/Extra Projects/19 jan 2018/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
+ <HintPath>D:/AriesProject/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{19046D48-DDD5-F80F-BF8B-635A469D8180}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{37E8B32D-5A68-E91D-7CCE-DAF31C13E163}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{E3548F99-6BAA-881B-7DAB-014FAFC89F6C}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{4AB1900E-1B52-BF2F-ACD7-FEF512CF8810}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{5290900F-BD9E-D9B6-9140-DD7A6D7DB9A6}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
+      <Project>{7E6F07DE-4EEB-6BAB-6820-2E7D36A64DEE}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript-Editor-firstpass.unityproj">
-      <Project>{4D87685E-6A3E-BBB4-E1ED-CDF0ACBA1042}</Project>      <Name>Assembly-UnityScript-Editor-firstpass</Name>    </ProjectReference>
+      <Project>{42BFD7FA-434D-9077-D0FD-0796B2A83E3B}</Project>      <Name>Assembly-UnityScript-Editor-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
