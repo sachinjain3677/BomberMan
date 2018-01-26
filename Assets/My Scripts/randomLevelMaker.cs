@@ -18,6 +18,7 @@ public class randomLevelMaker : MonoBehaviour {
 	public GameObject woodenBox;
 	public float selectorThreshold;
 	public GameObject level;
+
 	public GameObject enemy;
 	public int max_no_of_enemies;
 	public int max_no_of_power_ups;
@@ -75,6 +76,7 @@ public class randomLevelMaker : MonoBehaviour {
 				if(x_coordinate <= rows-2 && z_coordinate <= columns-2 && om.level[x_coordinate, z_coordinate] == null){
 					GameObject enemySpawned = Instantiate(enemy, new Vector3(x_coordinate, 0, z_coordinate), Quaternion.identity);
 					om.level[x_coordinate, z_coordinate] = enemySpawned.gameObject;
+					enemySpawned.transform.parent = level.transform;
 					//enemy_movement_script_list[enemiesSpawned] = enemySpawned.GetComponent<EnemyController>();
 					enemiesSpawned++;
 				}

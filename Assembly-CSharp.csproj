@@ -68,12 +68,11 @@
      <Compile Include="Assets\Survival Shooter\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\Survival Shooter\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Survival Shooter\Scripts\Player\PlayerShooting.cs" />
-     <Compile Include="Assets\Survival Shooter\_Complete-Game\MobileInput\Scripts\CrossPlatformInputManager.cs" />
-     <Compile Include="Assets\Survival Shooter\_Complete-Game\MobileInput\Scripts\Joystick.cs" />
-     <Compile Include="Assets\Survival Shooter\_Complete-Game\MobileInput\Scripts\MobileControlRig.cs" />
-     <Compile Include="Assets\Survival Shooter\_Complete-Game\MobileInput\Scripts\PlatformSpecific\MobileInput.cs" />
-     <Compile Include="Assets\Survival Shooter\_Complete-Game\MobileInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
-     <Compile Include="Assets\Survival Shooter\_Complete-Game\MobileInput\Scripts\VirtualInput.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\MobileInput\Scripts\AxisTouchButton.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\MobileInput\Scripts\ButtonHandler.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\MobileInput\Scripts\InputAxisScrollbar.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\MobileInput\Scripts\TiltInput.cs" />
+     <Compile Include="Assets\Survival Shooter\_Complete-Game\MobileInput\Scripts\TouchPad.cs" />
      <Compile Include="Assets\Survival Shooter\_Complete-Game\Scripts\Audio\MixLevels.cs" />
      <Compile Include="Assets\Survival Shooter\_Complete-Game\Scripts\Camera\CameraFollow.cs" />
      <Compile Include="Assets\Survival Shooter\_Complete-Game\Scripts\Enemy\EnemyAttack.cs" />
@@ -137,6 +136,8 @@
      <None Include="Assets\license_3rdpartynotice.txt" />
      <None Include="Assets\Vuforia\Editor\WebcamProfiles\profiles.xml" />
      <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
+     <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
+     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\StreamingAssets\Vuforia\AR_G.xml" />
      <None Include="Assets\My Prefabs\Chibi Mummy\readme.txt" />
      <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
@@ -166,6 +167,10 @@
  <Reference Include="Vuforia.UnityExtensions">
  <HintPath>D:/Extra Projects/19 jan 2018/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{19046D48-DDD5-F80F-BF8B-635A469D8180}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
