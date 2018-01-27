@@ -46,8 +46,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\My Prefabs\BasicBandit\DemoSceneBasicBandit\Scripts\ButtonFunction.cs" />
-     <Compile Include="Assets\My Prefabs\BasicBandit\DemoSceneBasicBandit\Scripts\MovementCamera.cs" />
+     <Compile Include="Assets\BasicBandit\DemoSceneBasicBandit\Scripts\ButtonFunction.cs" />
+     <Compile Include="Assets\BasicBandit\DemoSceneBasicBandit\Scripts\MovementCamera.cs" />
      <Compile Include="Assets\My Scripts\BombSpawnAndExplode.cs" />
      <Compile Include="Assets\My Scripts\BombTriggerScript.cs" />
      <Compile Include="Assets\My Scripts\EnemyController.cs" />
@@ -141,7 +141,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions">
- <HintPath>D:/AriesProject/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
+ <HintPath>C:/Users/sachi/Desktop/Unity_Related/AriesProject/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
