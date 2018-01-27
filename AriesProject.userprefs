@@ -1,19 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\My Scripts\BombSpawnAndExplode.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\My Scripts\fire_button_control.cs">
     <Files>
-      <File FileName="Assets\My Scripts\PlayerController.cs" Line="50" Column="23" />
-      <File FileName="Assets\My Scripts\BombSpawnAndExplode.cs" Line="74" Column="32" />
-      <File FileName="Assets\My Scripts\ObjectMatrix.cs" Line="1" Column="1" />
-      <File FileName="Assets\My Scripts\randomLevelMaker.cs" Line="1" Column="1" />
-      <File FileName="Assets\My Scripts\EnemyController.cs" Line="1" Column="1" />
-      <File FileName="Assets\My Scripts\power_pick_up.cs" Line="1" Column="1" />
-      <File FileName="Assets\My Scripts\Walk_and_Run.cs" Line="1" Column="1" />
-      <File FileName="Assets\My Scripts\up_button_control.cs" Line="16" Column="86" />
-      <File FileName="Assets\My Scripts\down_button_control.cs" Line="29" Column="23" />
-      <File FileName="Assets\My Scripts\left_button_control.cs" Line="17" Column="85" />
-      <File FileName="Assets\My Scripts\right_button_control.cs" Line="26" Column="2" />
-      <File FileName="Assets\My Scripts\fire_button_control.cs" Line="22" Column="2" />
+      <File FileName="Assets\My Scripts\up_button_control.cs" Line="34" Column="4" />
+      <File FileName="Assets\My Scripts\down_button_control.cs" Line="35" Column="4" />
+      <File FileName="Assets\My Scripts\left_button_control.cs" Line="36" Column="4" />
+      <File FileName="Assets\My Scripts\right_button_control.cs" Line="36" Column="4" />
+      <File FileName="Assets\My Scripts\fire_button_control.cs" Line="30" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

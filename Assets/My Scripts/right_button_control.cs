@@ -5,6 +5,7 @@ using UnityEngine;
 public class right_button_control : MonoBehaviour {
 
 	public Animator animator;
+	public float buffer;
 
 	PlayerController pc;
 
@@ -19,17 +20,19 @@ public class right_button_control : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.mousePosition.y >= button.position.y - button.rect.height / 2 && Input.mousePosition.y <= button.position.y + button.rect.height / 2 && Input.mousePosition.x <= button.position.x + button.rect.width / 2 && Input.mousePosition.x >= button.position.x - button.rect.width / 2) {
+		if (Input.mousePosition.y >= button.position.y - button.rect.height / 2 && Input.mousePosition.y <= button.position.y + button.rect.height / 2 && Input.mousePosition.x <= button.position.x + button.rect.width / 2 + buffer && Input.mousePosition.x >= button.position.x - button.rect.width / 2 - buffer) {
 
 			if (Input.GetMouseButtonDown (0)) {
 				pc.direction_x = 1;
 				animator.SetBool ("Walk", true);
 			}	
 
-			if (Input.GetMouseButtonUp (0)) {
-				pc.direction_x = 0;
-				animator.SetBool ("Walk", false);
-			}
+
+		}
+
+		if (Input.GetMouseButtonUp (0)) {
+			pc.direction_x = 0;
+			animator.SetBool ("Walk", false);
 		}
 
 

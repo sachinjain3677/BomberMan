@@ -7,6 +7,7 @@ public class up_button_control : MonoBehaviour {
 	PlayerController pc;
 
 	public Animator animator;
+	public float buffer;
 
 	RectTransform button;
 	// Use this for initialization
@@ -18,16 +19,18 @@ public class up_button_control : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.mousePosition.y >= button.position.y - button.rect.width / 2 && Input.mousePosition.y <= button.position.y + button.rect.width / 2 && Input.mousePosition.x <= button.position.x + button.rect.height / 2 && Input.mousePosition.x >= button.position.x - button.rect.height / 2) {
+		if (Input.mousePosition.y >= button.position.y - button.rect.width / 2 - buffer && Input.mousePosition.y <= button.position.y + button.rect.width / 2 + buffer && Input.mousePosition.x <= button.position.x + button.rect.height / 2 && Input.mousePosition.x >= button.position.x - button.rect.height / 2) {
 			if (Input.GetMouseButtonDown (0)) {
 				pc.direction_z = 1;
 				animator.SetBool ("Walk", true);
 			}	
 
-			if (Input.GetMouseButtonUp (0)) {
-				pc.direction_z = 0;
-				animator.SetBool ("Walk", false);
-			}
+
+		}
+
+		if (Input.GetMouseButtonUp (0)) {
+			pc.direction_z = 0;
+			animator.SetBool ("Walk", false);
 		}
 	}
 }

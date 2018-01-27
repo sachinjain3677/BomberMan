@@ -22,9 +22,11 @@ public class fire_button_control : MonoBehaviour {
 				bsae.fire_button_pressed = true;
 			}
 
-			if (Input.GetMouseButtonUp (0)) {
-				bsae.fire_button_pressed = false;
-			}
+
+		}
+
+		if (Input.GetMouseButtonUp (0)) {
+			bsae.fire_button_pressed = false;
 		}
 	}
 }

@@ -18,6 +18,7 @@ Todo:
 - [ ] Animations (like Dying)
 - [ ] Multiplayer using Google API
 - [ ] Multiplayer without Internet
+- [ ] pause game if image target lost
 
 
 New Ideas:
