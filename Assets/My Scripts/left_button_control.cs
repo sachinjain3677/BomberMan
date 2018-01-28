@@ -8,7 +8,8 @@ public class left_button_control : MonoBehaviour {
 	public float buffer;
 
 	PlayerController pc;
-
+	public AudioSource music;
+	public AudioClip clip;
 	RectTransform button;
 
 	// Use this for initialization
@@ -16,6 +17,7 @@ public class left_button_control : MonoBehaviour {
 		pc = GameObject.Find("PlayerGameObject").GetComponent<PlayerController>();
 		button = GetComponent<RectTransform> ();
 		animator = GameObject.Find("Basic_BanditPrefab Bighead").GetComponent<Animator> ();
+		clip = music.clip;
 	}
 
 	// Update is called once per frame
@@ -25,6 +27,7 @@ public class left_button_control : MonoBehaviour {
 			if (Input.GetMouseButtonDown (0)) {
 				pc.direction_x = -1;
 				animator.SetBool ("Walk", true);
+				music.Play ();
 			}	
 
 
@@ -33,6 +36,7 @@ public class left_button_control : MonoBehaviour {
 		if (Input.GetMouseButtonUp (0)) {
 			pc.direction_x = 0;
 			animator.SetBool ("Walk", false);
+			music.Stop ();
 		}
 
 

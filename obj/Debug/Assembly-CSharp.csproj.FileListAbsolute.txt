@@ -65,3 +65,37 @@ D:\Extra Projects\19 jan 2018\Temp\bin\Debug\Vuforia.UnityExtensions.xml
 D:\Extra Projects\19 jan 2018\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 D:\Extra Projects\19 jan 2018\obj\Debug\Assembly-CSharp.dll
 D:\Extra Projects\19 jan 2018\obj\Debug\Assembly-CSharp.pdb
+D:\nEWDATA\AriesProject\Temp\bin\Debug\Assembly-CSharp.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\Assembly-CSharp.pdb
+D:\nEWDATA\AriesProject\Temp\bin\Debug\nunit.framework.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\UnityEditor.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\UnityEngine.Analytics.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\UnityEngine.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\UnityEngine.HoloLens.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\UnityEngine.Networking.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\UnityEngine.TestRunner.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\UnityEngine.UI.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\UnityEngine.VR.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\Vuforia.UnityExtensions.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\Mono.Cecil.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\Unity.SerializationLogic.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\Unity.DataContract.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\Unity.UNetWeaver.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\Unity.CecilTools.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+D:\nEWDATA\AriesProject\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+D:\nEWDATA\AriesProject\Temp\bin\Debug\UnityEngine.xml
+D:\nEWDATA\AriesProject\Temp\bin\Debug\UnityEditor.xml
+D:\nEWDATA\AriesProject\Temp\bin\Debug\UnityEngine.UI.xml
+D:\nEWDATA\AriesProject\Temp\bin\Debug\UnityEngine.Networking.xml
+D:\nEWDATA\AriesProject\Temp\bin\Debug\UnityEngine.TestRunner.xml
+D:\nEWDATA\AriesProject\Temp\bin\Debug\nunit.framework.xml
+D:\nEWDATA\AriesProject\Temp\bin\Debug\UnityEngine.Analytics.xml
+D:\nEWDATA\AriesProject\Temp\bin\Debug\UnityEngine.HoloLens.xml
+D:\nEWDATA\AriesProject\Temp\bin\Debug\UnityEngine.VR.xml
+D:\nEWDATA\AriesProject\Temp\bin\Debug\Vuforia.UnityExtensions.xml
+D:\nEWDATA\AriesProject\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+D:\nEWDATA\AriesProject\obj\Debug\Assembly-CSharp.dll
+D:\nEWDATA\AriesProject\obj\Debug\Assembly-CSharp.pdb

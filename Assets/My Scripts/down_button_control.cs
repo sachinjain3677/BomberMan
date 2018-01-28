@@ -6,7 +6,8 @@ public class down_button_control : MonoBehaviour {
 
 	public Animator animator;
 	public float buffer;
-
+	public AudioSource music;
+	public AudioClip clip;
 	PlayerController pc;
 
 	RectTransform button;
@@ -16,6 +17,7 @@ public class down_button_control : MonoBehaviour {
 		pc = GameObject.Find("PlayerGameObject").GetComponent<PlayerController>();
 		button = GetComponent<RectTransform> ();
 		animator = GameObject.Find("Basic_BanditPrefab Bighead").GetComponent<Animator> ();
+		clip = music.clip;
 	}
 
 	// Update is called once per frame
@@ -24,6 +26,7 @@ public class down_button_control : MonoBehaviour {
 			if (Input.GetMouseButtonDown (0)) {
 				pc.direction_z = -1;
 				animator.SetBool ("Walk", true);
+				music.Play ();
 			}	
 
 
@@ -32,6 +35,7 @@ public class down_button_control : MonoBehaviour {
 		if (Input.GetMouseButtonUp (0)) {
 			pc.direction_z = 0;
 			animator.SetBool ("Walk", false);
+			music.Stop ();
 		}
 
 

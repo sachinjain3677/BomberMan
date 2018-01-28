@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BombTriggerScript : MonoBehaviour {
-	// Use this for initialization
+	public AudioSource music,music2;
+	public AudioClip clip,clip2;
 	void Start () {
-		
+		clip = music.clip;
+		clip2 = music2.clip;
+		music.Play ();
+		music2.Play ();
 	}
 	
 	// Update is called once per frame
