@@ -52,6 +52,7 @@
      <Compile Include="Assets\My Scripts\BombSpawnAndExplode.cs" />
      <Compile Include="Assets\My Scripts\BombTriggerScript.cs" />
      <Compile Include="Assets\My Scripts\EnemyController.cs" />
+     <Compile Include="Assets\My Scripts\EnemyHealth1.cs" />
      <Compile Include="Assets\My Scripts\ExplosionTriggerScript.cs" />
      <Compile Include="Assets\My Scripts\ObjectMatrix.cs" />
      <Compile Include="Assets\My Scripts\PlayerController.cs" />
@@ -142,7 +143,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions">
- <HintPath>D:/nEWDATA/AriesProject/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
+ <HintPath>D:/testing/30 jan/AriesProject/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
