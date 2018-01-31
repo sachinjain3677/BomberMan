@@ -45,7 +45,7 @@ public class randomLevelMaker : MonoBehaviour {
 		//NOTE: enemies_per_section NUMBER OF ENEMIES ARE SPAWNED IN ONE SECTION, SAME FOR ALL SECTIONS 
 		
 
-		max_no_of_enemies = (max_no_of_enemies < enemySections_z + enemySections_z)? enemySections_z + enemySections_z:max_no_of_enemies; 
+		max_no_of_enemies = (max_no_of_enemies < enemySections_z + enemySections_z)? max_no_of_enemies:enemySections_z + enemySections_z; 
 
 		enemy_position_x = new int[max_no_of_enemies];//array containing x-coordinates of enemies spawn positions
 		enemy_position_z = new int[max_no_of_enemies];//array containing z-coordinates of enemies spawn positions
@@ -66,6 +66,7 @@ public class randomLevelMaker : MonoBehaviour {
 				}
 
 				if(enemiesSpawned == max_no_of_enemies){
+					Debug.Log ("break1");
 					break;
 				}
 
@@ -83,7 +84,8 @@ public class randomLevelMaker : MonoBehaviour {
 			}
 			
 			if(enemiesSpawned == max_no_of_enemies){
-					break;
+				Debug.Log ("break2");	
+				break;
 			}	
 		}		
 
