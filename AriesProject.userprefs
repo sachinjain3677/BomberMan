@@ -1,13 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Pause Menu Assets\Scripts\Pausemenu\PauseManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\My Scripts\player_control_direction_predictor.cs">
     <Files>
       <File FileName="Assets\My Scripts\ExplosionTriggerScript.cs" Line="1" Column="1" />
       <File FileName="Assets\My Scripts\EnemyHealth1.cs" Line="1" Column="1" />
       <File FileName="Assets\My Scripts\PlayerController.cs" Line="1" Column="1" />
       <File FileName="Assets\My Scripts\BombSpawnAndExplode.cs" Line="1" Column="1" />
       <File FileName="Assets\My Scripts\randomLevelMaker.cs" Line="1" Column="1" />
-      <File FileName="Assets\Pause Menu Assets\Scripts\Pausemenu\PauseManager.cs" Line="166" Column="35" />
+      <File FileName="Assets\Pause Menu Assets\Scripts\Pausemenu\PauseManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\My Scripts\player_control_direction_predictor.cs" Line="65" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

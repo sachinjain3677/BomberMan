@@ -61,6 +61,7 @@
      <Compile Include="Assets\My Scripts\fire_button_control.cs" />
      <Compile Include="Assets\My Scripts\left_button_control.cs" />
      <Compile Include="Assets\My Scripts\movingPlayer.cs" />
+     <Compile Include="Assets\My Scripts\player_control_direction_predictor.cs" />
      <Compile Include="Assets\My Scripts\player_touched.cs" />
      <Compile Include="Assets\My Scripts\power_pick_up.cs" />
      <Compile Include="Assets\My Scripts\randomLevelMaker.cs" />

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class temp : MonoBehaviour {
 
-	int l=5;
-	int k=6;
+	int x = 400;
 
 	// Use this for initialization
 	void Start () {
-		transform.LookAt(new Vector3(transform.position.x,transform.position.y,transform.position.z+1));	
+		//transform.LookAt(new Vector3(transform.position.x,transform.position.y,transform.position.z+1));	
+		Debug.Log(x % 360);
 	}
 	
 	
