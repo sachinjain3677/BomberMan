@@ -56,6 +56,7 @@
      <Compile Include="Assets\My Scripts\ExplosionTriggerScript.cs" />
      <Compile Include="Assets\My Scripts\ObjectMatrix.cs" />
      <Compile Include="Assets\My Scripts\PlayerController.cs" />
+     <Compile Include="Assets\My Scripts\SceneManagement.cs" />
      <Compile Include="Assets\My Scripts\Walk_and_Run.cs" />
      <Compile Include="Assets\My Scripts\down_button_control.cs" />
      <Compile Include="Assets\My Scripts\fire_button_control.cs" />
@@ -110,6 +111,7 @@
      <Compile Include="Assets\Vuforia\Scripts\WireframeBehaviour.cs" />
      <Compile Include="Assets\Vuforia\Scripts\WireframeTrackableEventHandler.cs" />
      <Compile Include="Assets\Vuforia\Scripts\WordBehaviour.cs" />
+     <Compile Include="Assets\game_Over.cs" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Pause Menu Assets\Fonts\open-sans\Apache License.txt" />
      <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
@@ -150,7 +152,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions">
- <HintPath>C:/Users/sachi/Desktop/Unity_Related/AriesProject/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
+ <HintPath>D:/testing/AriesProject/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
