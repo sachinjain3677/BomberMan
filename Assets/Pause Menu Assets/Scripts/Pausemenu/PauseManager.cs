@@ -362,6 +362,7 @@ namespace GreatArcStudios
         {
             Application.LoadLevel(Application.loadedLevel);
             uiEventSystem.firstSelectedGameObject = defualtSelectedMain;
+			Resume ();
         }
         /// <summary>
         /// Method to resume the game, so disable the pause menu and re-enable all other ui elements

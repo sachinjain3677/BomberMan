@@ -22,6 +22,8 @@ public class right_button_control : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (animator == null) {
+			return;	}
 		if (Input.mousePosition.y >= button.position.y - button.rect.height / 2 && Input.mousePosition.y <= button.position.y + button.rect.height / 2 && Input.mousePosition.x <= button.position.x + button.rect.width / 2 + buffer && Input.mousePosition.x >= button.position.x - button.rect.width / 2 - buffer) {
 
 			if (Input.GetMouseButtonDown (0)) {
