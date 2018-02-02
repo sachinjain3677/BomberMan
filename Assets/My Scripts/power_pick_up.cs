@@ -7,14 +7,12 @@ public class power_pick_up : MonoBehaviour {
 	BombSpawnAndExplode bsae;
 	PlayerController pc;
 	public AudioSource music;
-	public AudioClip clip;
 
 	public float speed_increase_factor;
 
 	void Start(){
 		bsae = GameObject.Find("GameController").GetComponent<BombSpawnAndExplode>();
 		pc = GetComponent<PlayerController> ();
-		clip = music.clip;
 	}
 
 
