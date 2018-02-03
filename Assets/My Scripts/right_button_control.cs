@@ -9,19 +9,20 @@ public class right_button_control : MonoBehaviour {
 
 	PlayerController pc;
 	public AudioSource music;
-	public AudioClip clip;
 	RectTransform button;
 
 	// Use this for initialization
 	void Start () {
 		pc = GameObject.Find("PlayerGameObject").GetComponent<PlayerController>();
 		button = GetComponent<RectTransform> ();
-		animator = GameObject.Find("Basic_BanditPrefab Bighead").GetComponent<Animator> ();
-		clip = music.clip;
+		animator = GameObject.Find ("Basic_BanditPrefab Bighead").GetComponent<Animator> ();
 	}
 
 	// Update is called once per frame
 	void Update () {
+		if (animator == null) {
+			music.Stop ();
+			return;	}
 		if (Input.mousePosition.y >= button.position.y - button.rect.height / 2 && Input.mousePosition.y <= button.position.y + button.rect.height / 2 && Input.mousePosition.x <= button.position.x + button.rect.width / 2 + buffer && Input.mousePosition.x >= button.position.x - button.rect.width / 2 - buffer) {
 
 			if (Input.GetMouseButtonDown (0)) {
