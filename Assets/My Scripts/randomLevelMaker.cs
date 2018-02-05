@@ -66,7 +66,7 @@ public class randomLevelMaker : MonoBehaviour {
 				}
 
 				if(enemiesSpawned == max_no_of_enemies){
-					Debug.Log ("break1");
+					//Debug.Log ("break1");
 					break;
 				}
 
@@ -84,7 +84,7 @@ public class randomLevelMaker : MonoBehaviour {
 			}
 			
 			if(enemiesSpawned == max_no_of_enemies){
-				Debug.Log ("break2");	
+				//Debug.Log ("break2");	
 				break;
 			}	
 		}		

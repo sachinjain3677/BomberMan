@@ -15,12 +15,15 @@ public class ObjectMatrix : MonoBehaviour {
 
 		level = new GameObject[rows, columns];
 		var objects = levelHolder.GetComponentsInChildren<Transform>();
+
 	
 		foreach(var child in objects){
 			if(child.gameObject.name!="Level" && child.gameObject.name!="SteelBlockMatrix"){
 				level[(int)child.position.x, (int)child.position.z] = child.gameObject;
 			}
 		}
+
+		level[0,0] = null;
 		//Debug.Log(level[0,0]);
 
 		// foreach(var child in level){
