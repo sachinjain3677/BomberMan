@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AriesProject", "Assembly-CS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AriesProject", "Assembly-CSharp-Editor.csproj", "{37F5E46E-735F-0FF5-BEA4-50D24DAF34A3}"
 EndProject
+Project("{79D1E459-50DD-2FB2-A95B-CD6F8E6928DA}") = "AriesProject", "Assembly-UnityScript-Editor-firstpass.unityproj", "{42BFD7FA-434D-9077-D0FD-0796B2A83E3B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{37F5E46E-735F-0FF5-BEA4-50D24DAF34A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37F5E46E-735F-0FF5-BEA4-50D24DAF34A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37F5E46E-735F-0FF5-BEA4-50D24DAF34A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42BFD7FA-434D-9077-D0FD-0796B2A83E3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42BFD7FA-434D-9077-D0FD-0796B2A83E3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42BFD7FA-434D-9077-D0FD-0796B2A83E3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42BFD7FA-434D-9077-D0FD-0796B2A83E3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
