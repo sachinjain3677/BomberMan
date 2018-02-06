@@ -6,6 +6,7 @@ Confidential and Proprietary - Protected under copyright and other laws.
 
 using UnityEngine;
 
+
 namespace Vuforia
 {
     /// <summary>
@@ -20,12 +21,17 @@ namespace Vuforia
     
         #endregion // PRIVATE_MEMBER_VARIABLES
 
-
+		public GameObject gameController;
+		public GameObject Player;
+		//public GameObject enemy;
+		public GameObject level;
 
         #region UNTIY_MONOBEHAVIOUR_METHODS
     
         void Start()
         {
+			//Player.SetActive (false);
+			gameController.SetActive (false);
             mTrackableBehaviour = GetComponent<TrackableBehaviour>();
             if (mTrackableBehaviour)
             {
@@ -51,11 +57,11 @@ namespace Vuforia
                 newStatus == TrackableBehaviour.Status.TRACKED ||
                 newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
             {
-                OnTrackingFound();
+				OnTrackingFound();
             }
             else
             {
-                OnTrackingLost();
+				OnTrackingLost();
             }
         }
 
@@ -64,11 +70,30 @@ namespace Vuforia
 
 
         #region PRIVATE_METHODS
+/*
 
+		void deactivateEnemy(){
+			enemy = GameObject.FindGameObjectWithTag ("Enemy");
+			while (enemy != null) {
+				enemy.SetActive (false);
+			}
+		}
 
-        private void OnTrackingFound()
+		void activateEnemy(){
+			enemy = GameObject.FindGameObjectWithTag ("Enemy");
+			while (enemy != null) {
+				enemy.SetActive (true);
+			}
+		}
+*/
+
+		private void OnTrackingFound()
         {
-            Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
+			Player.SetActive (true);
+			level.SetActive (true);
+			//activateEnemy ();
+			gameController.SetActive (true);
+			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
             // Enable rendering:
@@ -89,7 +114,11 @@ namespace Vuforia
 
         private void OnTrackingLost()
         {
-            Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
+			Player.SetActive (false);
+			level.SetActive (false);
+			gameController.SetActive (false);
+
+			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
             // Disable rendering:
@@ -105,7 +134,8 @@ namespace Vuforia
             }
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
-        }
+
+		}
 
         #endregion // PRIVATE_METHODS
     }

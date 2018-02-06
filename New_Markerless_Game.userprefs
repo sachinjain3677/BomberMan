@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\My Scripts\up_button_control.cs">
+    <Files>
+      <File FileName="Assets\My Scripts\down_button_control.cs" Line="28" Column="265" />
+      <File FileName="Assets\My Scripts\left_button_control.cs" Line="31" Column="198" />
+      <File FileName="Assets\My Scripts\right_button_control.cs" Line="30" Column="303" />
+      <File FileName="Assets\My Scripts\up_button_control.cs" Line="29" Column="285" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

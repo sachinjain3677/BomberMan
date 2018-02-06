@@ -153,24 +153,31 @@ public class UDTEventHandler : MonoBehaviour, IUserDefinedTargetEventHandler
     /// </summary>
     public void BuildNewTarget()
     {
-        if (mFrameQuality == ImageTargetBuilder.FrameQuality.FRAME_QUALITY_MEDIUM || 
-            mFrameQuality == ImageTargetBuilder.FrameQuality.FRAME_QUALITY_HIGH)
-        {
-            // create the name of the next target.
-            // the TrackableName of the original, linked ImageTargetBehaviour is extended with a continuous number to ensure unique names
-            string targetName = string.Format("{0}-{1}", ImageTargetTemplate.TrackableName, mTargetCounter);
+		// create the name of the next target.
+		// the TrackableName of the original, linked ImageTargetBehaviour is extended with a continuous number to ensure unique names
+		string targetName = string.Format("{0}-{1}", ImageTargetTemplate.TrackableName, mTargetCounter);
+
+		// generate a new target:
+		mTargetBuildingBehaviour.BuildNewTarget(targetName, ImageTargetTemplate.GetSize().x);
+
+   //     if (mFrameQuality == ImageTargetBuilder.FrameQuality.FRAME_QUALITY_MEDIUM || 
+   //         mFrameQuality == ImageTargetBuilder.FrameQuality.FRAME_QUALITY_HIGH)
+   //     {
+   //         // create the name of the next target.
+   //         // the TrackableName of the original, linked ImageTargetBehaviour is extended with a continuous number to ensure unique names
+   //         string targetName = string.Format("{0}-{1}", ImageTargetTemplate.TrackableName, mTargetCounter);
 
             // generate a new target:
-            mTargetBuildingBehaviour.BuildNewTarget(targetName, ImageTargetTemplate.GetSize().x);
-        }
-        else
-        {
-            Debug.Log("Cannot build new target, due to poor camera image quality");
-            if (mQualityDialog)
-            {
-                mQualityDialog.gameObject.SetActive(true);
-            }
-        }
+  //          mTargetBuildingBehaviour.BuildNewTarget(targetName, ImageTargetTemplate.GetSize().x);
+   //     }
+   //     else
+    //    {
+     //       Debug.Log("Cannot build new target, due to poor camera image quality");
+      //      if (mQualityDialog)
+        //    {
+        //        mQualityDialog.gameObject.SetActive(true);
+         //   }
+      //  }
     }
 
     public void CloseQualityDialog()

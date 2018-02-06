@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,6 +29,7 @@ public class randomLevelMaker : MonoBehaviour {
 
 
 	void Start(){
+		Debug.Log ("called");
 		power_ups_spawned = 0;
 		woodenBox_spawn_count = 0;
 	}
