@@ -11,12 +11,12 @@ public class player_control_direction_predictor : MonoBehaviour {
 	PlayerController pc;
 
 	void Start(){
-		pc = GameObject.Find ("PlayerGameObject").GetComponent<PlayerController> ();
+		
 	}
 
 	// Update is called once per frame
 	void Update () {
-
+		pc = GameObject.Find ("PlayerGameObject").GetComponent<PlayerController> ();
 		//uncomment if change controls according to ar camera position
 		z = transform.position.z;
 		x = transform.position.x;

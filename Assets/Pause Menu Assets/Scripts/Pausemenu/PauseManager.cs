@@ -13,9 +13,11 @@ namespace GreatArcStudios
     /// <summary>
     /// The pause menu manager. You can extend this to make your own. Everything is pretty modular, so creating you own based off of this should be easy. Thanks for downloading and good luck! 
     /// </summary>
-    public class PauseManager : MonoBehaviour
+	public class PauseManager : MonoBehaviour
     {
-        /// <summary>
+        
+
+		/// <summary>
         /// This is the main panel holder, which holds the main panel and should be called "main panel"
         /// </summary> 
         public GameObject mainPanel;

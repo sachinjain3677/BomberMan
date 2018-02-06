@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4AB1900E-1B52-BF2F-ACD7-FEF512CF8810}</ProjectGuid>
+    <ProjectGuid>{51D2BBB3-BEE6-72AF-A773-5D4EACC93CAB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -58,6 +58,7 @@
      <Compile Include="Assets\Import_For_Markerless\UserDefinedTargets\Scripts\QualityDialog.cs" />
      <Compile Include="Assets\Import_For_Markerless\UserDefinedTargets\Scripts\TargetBuilderUIHandler.cs" />
      <Compile Include="Assets\Import_For_Markerless\UserDefinedTargets\Scripts\UDTEventHandler.cs" />
+     <Compile Include="Assets\Import_For_Markerless\UserDefinedTargets\Scripts\UDTEventHandler1.cs" />
      <Compile Include="Assets\Import_For_Markerless\UserDefinedTargets\Scripts\UDTSettings.cs" />
      <Compile Include="Assets\My Scripts\BackgroundMusicPlay.cs" />
      <Compile Include="Assets\My Scripts\BombSpawnAndExplode.cs" />
@@ -94,6 +95,7 @@
      <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
      <Compile Include="Assets\Vuforia\Scripts\DefaultSmartTerrainEventHandler.cs" />
      <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler1.cs" />
      <Compile Include="Assets\Vuforia\Scripts\GLErrorHandler.cs" />
      <Compile Include="Assets\Vuforia\Scripts\HideExcessAreaBehaviour.cs" />
      <Compile Include="Assets\Vuforia\Scripts\ImageTargetBehaviour.cs" />
@@ -163,12 +165,12 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions">
- <HintPath>D:/testing/AriesProject/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
+ <HintPath>D:/testing/New_Markerless_Game/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{37E8B32D-5A68-E91D-7CCE-DAF31C13E163}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{CC978F58-457F-578B-B48D-EAFB488F9F4A}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
