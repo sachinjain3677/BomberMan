@@ -21,7 +21,8 @@ Assets taken from the [Unity asset store](https://assetstore.unity.com/?gclid=Cj
 3. **Bomb -** pre-blast animation, dynamic blast region, detection and impact of the blast on the surroundings
 4. **Obstacles -** wooden boxes containing health, bombs and even enemies sometimes
 5. **Clock -** The whole game is a race against the time and generates score based on the number of obstacles cleared and enemies destroyed
-6. **Leaderboard -** After each game, the score is updated on a firebase server running in the cloud to keep track of the global leaderboard
+6. **AR Integration -** Shifting the whole to AR and making some AR specific changes like what happens to the assets when image target is out of scope 
+7. **Leaderboard -** After each game, the score is updated on a firebase server running in the cloud to keep track of the global leaderboard
 
 
 ## Future Scopes:
