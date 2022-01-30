@@ -5,6 +5,16 @@ To play the game, install the apk in your android device, run the game and aim i
 
 Assets taken from the [Unity asset store](https://assetstore.unity.com/?gclid=Cj0KCQiAi9mPBhCJARIsAHchl1z52KMDOvktJJuYpZwUmGRrSgj2Kuupn0Ychu8Rh-yOXi5ARzhbVhAaAsC_EALw_wcB&gclsrc=aw.ds)
 
+## First Look
+### Main_Menu
+![image](https://user-images.githubusercontent.com/24416093/151710321-9f92c2cd-94ce-43b2-a40b-a6c7ba620381.png)
+### Gameplay
+![image](https://user-images.githubusercontent.com/24416093/151710482-52f3e086-8f68-4796-aa0e-2ec5de56e5db.png)
+![image](https://user-images.githubusercontent.com/24416093/151710494-c9ca9d19-dd7c-4f62-be77-07a16cb14608.png)
+![image](https://user-images.githubusercontent.com/24416093/151710493-7f7d8c3b-a407-4bb0-b83b-914fafb3ea80.png)
+### Pause_Menu![image](https://user-images.githubusercontent.com/24416093/151710495-342acef2-11c3-466b-996b-5d5031c0caf6.png)
+
+
 ## Steps involved in development:
 1. **Basic character movements -** walking, rotating, bomb placement
 2. **Enemy Movement -** Auto direction change, dynamic speeds depending on difficulty, random spawns
