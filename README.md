@@ -1,7 +1,7 @@
 # BomberMan
 Motivated from the classic nintendo game "Bomberman", this game is built upon Unity3D and Vuforia to provide an immersive 3D Augmented Reality experience on your android device.
 
-To play the game, install the apk in your android device, run the game and aim it at the image target provided, enjoy!
+To play the game, install this [apk](https://drive.google.com/file/d/1jckp1iFQOsCMAKrhyYkkTFF_RA3aZ2Mn/view) on your android device, run the game and aim it at the image target provided in the Resources directory, enjoy!! Do let us know if you like the game, by giving us a star, thanks :)
 
 Assets taken from the [Unity asset store](https://assetstore.unity.com/?gclid=Cj0KCQiAi9mPBhCJARIsAHchl1z52KMDOvktJJuYpZwUmGRrSgj2Kuupn0Ychu8Rh-yOXi5ARzhbVhAaAsC_EALw_wcB&gclsrc=aw.ds)
 
